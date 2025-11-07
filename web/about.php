@@ -1,0 +1,5 @@
+<?php session_start(); if (!isset($_SESSION['ems_user'])) { header('Location: index.php'); exit; } $user = $_SESSION['ems_user']; ?>
+<!doctype html><html><head><meta charset="utf-8"><title>About - EMS</title><link rel="stylesheet" href="assets/css/style.css"></head><body>
+<div class="app"><div class="header"><div class="brand"><div class="logo">EMS</div><h1>About</h1></div><div><span>Welcome, <?php echo htmlspecialchars($user['username']); ?></span>&nbsp;&nbsp;<a href="../backend/logout.php" class="btn ghost">Logout</a></div></div>
+<div class="grid"><aside class="sidebar"><nav class="nav"><a href="dashboard.php">🏠 Dashboard</a><a href="employees.php">👥 Employees</a><a href="leaves.php">📅 Leaves</a></nav></aside><section class="content"><div class="card"><h3>About Apex Solutions</h3><p>This is a demo Employee Management System with gradient UI.</p></div></section></div></div>
+<script src="assets/js/app.js"></script></body></html>
